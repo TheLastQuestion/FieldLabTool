@@ -1,0 +1,17 @@
+{
+    "contents" : "# getting the workspace up and ready\nsetwd(\"/Users/Bryant/Documents\")\nlibrary(shiny)\nrunApp(\"App-1\")\n      ",
+    "created" : 1436575278300.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1163041018",
+    "id" : "643B0E97",
+    "lastKnownWriteTime" : 1436551318,
+    "path" : "~/App-1/Get app up and running.R",
+    "project_path" : "Get app up and running.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\n\nshinyUI(fluidPage(\n  titlePanel(\"<HKS Field Lab Tool>\"),\n  sidebarLayout(position = \"right\",\n    sidebarPanel(\n      fileInput('file1', 'Choose CSV File',\n                 accept=c('text/csv',\n                          'text/comma-separated-values,text/plain',\n                          '.csv.')),\n    tags$hr(),\n    checkboxInput('header','Header', TRUE),\n    radioButtons('sep', 'Separator',\n                 c(Comma=',',\n                   Semicolon=';',\n                   Tab='\\t'),\n                 ','),\n    radioButtons('quote', 'Quote',\n                 c(None='',\n                   'Double Quote'='\"',\n                   'Single Quote'=\"'\"),\n                 '\"')\n    ),\n\n    mainPanel(\n      actionButton(\"do\", \"Calculate risk scores\"),\n\n      h1(\"Sample data\"),\n      h5(\"(real addresses, fake data)\"),\n      \n\n      \n      \n      \n      h5(\" \"),\n      tableOutput('contents')\n    )\n  )\n))",
+    "created" : 1436575269599.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2095133234",
+    "id" : "F808C056",
+    "lastKnownWriteTime" : 1436550736,
+    "path" : "~/App-1/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

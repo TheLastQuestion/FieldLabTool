@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nstandish <- read.csv(\"data/Standish.csv\", header= TRUE, sep = \",\", \n                     quote = \"\\\"\", dec = \".\", fill = TRUE, comment.char = \"\")\n\nshinyServer(function(input, output, session) {\n  \n\n    observeEvent(input$do, {\n      # I think I want the script that calculates risk score to go here, \n      # steps might be:\n      \n      # Create new variable/column with header \"Financial risk\"\n      # (loop) for each record:\n      #     Factor 1 + Factor 2 x Factor 3 = x\n      #     Store x in the Financial risk variable\n      # (if necessary), update currently displayed table to display new \"financial risk\" column\n \n      \n      # this is all i really figured out so far, and of course I would\n      # need a way to replace 'washington' below with the current file\n      # whether that be the default standish file, or new user-uploaded file\n      \n#      Washington$risk_score <- NA\n#      n <- nrow(Washington)\n#      for(i in 1:n) {\n#        Washington$risk_score[i] <- Washington$Factor.1[i] + Washington$Factor.2[i]\n#      }\n      \n    })\n \n  \n  output$contents <- renderTable({\n    inFile <- input$file1\n    \n    if (is.null(inFile))\n      return(standish)\n    \n    read.csv(inFile$datapath, header=input$header, sep=input$sep, \n             quote=input$quote)\n  })\n  \n  \n  \n})",
+    "created" : 1436575257456.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2342649731",
+    "id" : "BA463A8E",
+    "lastKnownWriteTime" : 1436553704,
+    "path" : "~/App-1/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
